@@ -1,1 +1,2 @@
-console.log('hello webpack');
+import './css/style.css';
+import './js/app'

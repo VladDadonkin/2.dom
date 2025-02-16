@@ -1,5 +1,7 @@
-export const gameField = document.querySelector(".gameField");
-export const allCells = 16;
+import image from '../img/goblin.png';
+
+const gameField = document.querySelector(".gameField");
+const allCells = 16;
 
 for (let i = 0; i < allCells; i++) {
   const cell = document.createElement("div");
@@ -8,15 +10,15 @@ for (let i = 0; i < allCells; i++) {
   cell.dataset.index = i;
 }
 
-export const goblin = document.createElement("img");
-goblin.src = "./img/goblin.png";
+const goblin = document.createElement("img");
+goblin.src =  image;
 goblin.alt = "goblin";
 
 let currentCellIndex = Math.floor(Math.random() * allCells);
 const cells = document.querySelectorAll(".cell");
 cells[currentCellIndex].appendChild(goblin);
 
-export function moveCharacter() {
+function moveCharacter() {
   let newIndex;
   do {
     newIndex = Math.floor(Math.random() * allCells);
